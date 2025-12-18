@@ -1,0 +1,131 @@
+/* ===============================
+   AUTH PAGES (LOGIN & REGISTER)
+   Consistent with Dashboard Theme
+================================ */
+
+/* Page background */
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Card container */
+.auth-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Heading */
+.auth-title {
+  color: #e5e7eb;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Subheading */
+.auth-subtitle {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* Form layout */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Inputs & Select */
+.auth-input,
+.auth-select {
+  padding: 14px 16px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: #e5e7eb;
+  outline: none;
+}
+
+.auth-input::placeholder {
+  color: #64748b;
+}
+
+.auth-input:focus,
+.auth-select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Primary button */
+.auth-button {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.auth-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Error message */
+.auth-error {
+  background: #450a0a;
+  color: #fecaca;
+  border: 1px solid #7f1d1d;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Success message */
+.auth-success {
+  background: #052e16;
+  color: #bbf7d0;
+  border: 1px solid #166534;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Footer text */
+.auth-footer {
+  margin-top: 22px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* Footer links */
+.auth-link {
+  color: #3b82f6;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}

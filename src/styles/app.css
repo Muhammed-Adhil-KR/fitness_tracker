@@ -1,0 +1,327 @@
+/* =====================================================
+   GLOBAL RESET & THEME VARIABLES
+===================================================== */
+:root {
+  --bg-main: #0b1020;
+  --bg-panel: #11162a;
+  --bg-card: #151b36;
+  --accent: #4fd1c5;
+  --accent-2: #38bdf8;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --border-soft: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(135deg, #070b18, #0b1020);
+  color: var(--text-main);
+}
+
+/* =====================================================
+   APP LAYOUT
+===================================================== */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =====================================================
+   SIDEBAR (FIXED WITH BOTTOM LOGOUT)
+===================================================== */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #0b1020, #0e1430);
+  padding: 30px 22px;
+  border-right: 1px solid var(--border-soft);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.sidebar h3 {
+  font-size: 29px;
+  color: var(--accent);
+  margin-bottom: 35px;
+}
+
+/* Navigation links */
+.sidebar a {
+  display: block;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: 19px;
+  transition: all 0.25s ease;
+}
+
+.sidebar a:hover {
+  background: rgba(79, 209, 197, 0.15);
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+/* Logout button fixed at bottom */
+.sidebar button {
+  margin-top: auto; /* 🔥 KEY FIX */
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--danger);
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.sidebar button:hover {
+  background: #dc2626;
+}
+
+/* =====================================================
+   MAIN CONTENT (SCROLL AREA)
+===================================================== */
+.main-content {
+  margin-left: 260px;
+  padding: 40px;
+  width: calc(100% - 260px);
+}
+
+/* =====================================================
+   HEADINGS & TEXT
+===================================================== */
+h1 {
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 25px;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+h3 {
+  font-size: 22px;
+  color: var(--accent-2);
+  margin-bottom: 14px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-main);
+}
+
+.muted-text {
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* =====================================================
+   CARDS & SECTIONS
+===================================================== */
+.card,
+.section-card,
+.form-card,
+.item-card,
+.activity-card,
+.metric-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 26px;
+  margin-bottom: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  border: 1px solid var(--border-soft);
+}
+
+/* =====================================================
+   FORMS
+===================================================== */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  background: #060a1c;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+button {
+  padding: 14px 22px;
+  font-size: 16px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #020617;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* =====================================================
+   INTENT BOX (Dashboard)
+===================================================== */
+.intent-box {
+  background: rgba(6, 10, 28, 0.9);
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 18px;
+  border-left: 5px solid var(--accent-2);
+}
+
+.intent-box li {
+  color: #c7d2fe;
+}
+
+/* =====================================================
+   GOALS
+===================================================== */
+.item-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-completed {
+  background: var(--success);
+  color: #022c22;
+}
+
+.status-inprogress {
+  background: var(--warning);
+  color: #422006;
+}
+
+.status-pending {
+  background: #6b7280;
+  color: white;
+}
+
+.progress-track {
+  height: 12px;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+/* =====================================================
+   ACTIVITIES
+===================================================== */
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: var(--danger);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* =====================================================
+   FILTER ROW
+===================================================== */
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* =====================================================
+   PROFILE
+===================================================== */
+.profile-details {
+  margin-top: 20px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  margin: 20px 0;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 900px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .app-container {
+    flex-direction: column;
+  }
+}
