@@ -1,64 +1,75 @@
 # 💪 Fitness Tracker
 
-Fitness Tracker is a full-stack web application developed using **React**, **Node.js**, and **SQL** that helps users monitor workouts, track fitness progress, and manage health-related activities through an intuitive and responsive interface.
+Fitness Tracker is a full-stack web application built using **React.js**, **Node.js**, **Express.js**, and **MySQL** that enables users to monitor their fitness journey by tracking daily activities, health metrics, personalized goals, and overall progress through an interactive dashboard.
 
 ---
 
 ## 🚀 Features
 
-- 👤 User Registration & Login
-- 🏋️ Workout Tracking
-- 📊 Fitness Progress Dashboard
-- 📅 Activity History
-- 🎯 Goal Management
-- 📈 Performance Statistics
-- 🔒 Secure User Authentication
-- 📱 Responsive User Interface
+  🔐 Authentication
+  👤 User Dashboard
+  📊 Health Metrics
+  🏃 Activity Tracking
+  🎯 Goal Management
+  📈 Progress Monitoring
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠 Tech Stack
 
-### Frontend
+## Frontend
 - React.js
-- HTML5
-- CSS3
-- JavaScript
+- React Router
+- Axios
+- CSS
 
-### Backend
+## Backend
 - Node.js
 - Express.js
+- JWT Authentication
+- bcrypt
 
-### Database
-- SQL (MySQL)
+## Database
+- MySQL
 
 ---
 
-## 📂 Project Structure
+# 📁 Project Structure
 
 ```text
-Fitness-Tracker/
+fitness_tracker/
+│
 ├── client/
-│   ├── src/
 │   ├── public/
-│   └── package.json
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   └── vite.config.js
 │
 ├── server/
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/
 │   ├── config/
-│   └── package.json
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── uploads/
+│   ├── index.js
+│   ├── package.json
+│   └── .env
 │
 ├── database/
 │   └── fitness_tracker.sql
 │
-└── README.md
+├── README.md
+└── package.json
 ```
 
 ---
-
-
 
 ## ▶️ Running the Application
 
@@ -73,30 +84,54 @@ npm start
 
 ```bash
 cd client
-npm start
-```
-
-The application will be available at:
-
-```
-Frontend: http://localhost:3000
-
-Backend: http://localhost:5000
+npm run dev
 ```
 
 ---
 
-## 📚 Learning Outcomes
+## 🌐 Access the Application
 
-This project demonstrates:
+Frontend
+
+```
+http://localhost:5173
+```
+
+Backend API
+
+```
+http://localhost:5000
+```
+
+---
+
+# 🎯 Learning Outcomes
+
+This project demonstrates practical implementation of:
 
 - Full-Stack Web Development
-- REST API Development
+- RESTful API Development
+- JWT Authentication
 - React Component Architecture
-- Node.js & Express Backend
-- SQL Database Integration
-- Authentication & Authorization
+- State Management
+- Express.js Backend
+- MySQL Database Integration
 - CRUD Operations
+- User Authentication & Authorization
+
+---
+
+
+# 👨‍💻 Author
+
+**Muhammed Adhil**
+
+GitHub: https://github.com/Muhammed-Adhil-KR
+
+---
+
+
+
 - Responsive UI Design
 
 ---
