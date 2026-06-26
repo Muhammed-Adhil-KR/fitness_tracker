@@ -6,12 +6,13 @@ Fitness Tracker is a full-stack web application built using **React.js**, **Node
 
 ## 🚀 Features
 
-  🔐 Authentication
-  👤 User Dashboard
-  📊 Health Metrics
-  🏃 Activity Tracking
-  🎯 Goal Management
-  📈 Progress Monitoring
+### 🔐 Authentication
+### 👤 User Dashboard
+### 📊 Health Metrics
+### 🏃 Activity Tracking
+### 🎯 Goal Management
+### 📈 Progress Monitoring
+
 
 ---
 
